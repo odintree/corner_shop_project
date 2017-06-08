@@ -56,7 +56,6 @@
     }
 
     .time {
-        background: lightgoldenrodyellow;
         margin-bottom: 1px;
         text-align: right;
     }
@@ -64,4 +63,5 @@
         max-height:400px;
         overflow-y: auto;
     }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="component">
-        <h1>Click-clack</h1>
+        <h3>Click-clack</h3>
         <hr>
         <div class="row">
             <app-maps
@@ -42,7 +42,5 @@
 </script>
 
 <style scoped>
-    .row {
 
-    }
 </style>

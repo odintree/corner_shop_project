@@ -1,23 +1,30 @@
 <template>
     <div class="container">
-        <app-header></app-header>
-        <hr>
-        <app-main-box></app-main-box>
-        <hr>
-        <app-footer></app-footer>
+        <div class="row">
+            <button>Home</button>
+            <button>About project</button>
+            <button>About us</button>
+
+            <app-header></app-header>
+            <hr>
+            <app-main-box></app-main-box>
+            <hr>
+            <app-footer></app-footer>
+        </div>
     </div>
 </template>
 
 <script>
-    import Header from './components/Shared/Header.vue';
-    import Footer from './components/Shared/Footer.vue';
-    import MainBox from './components/Shared/MainBox.vue'
+    import Header from './components/Parts/Header.vue';
+    import Footer from './components/Parts/Footer.vue';
+    import MainBox from './components/Parts/MainBox.vue'
 
     export default {
         data: function () {
             return {
                 lat: 41.39,
-                lgn: 2.19
+                lgn: 2.19,
+                selectedComponent: 'app-main-box '
             };
         },
         components: {
