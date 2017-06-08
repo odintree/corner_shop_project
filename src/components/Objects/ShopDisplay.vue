@@ -1,9 +1,10 @@
 <template>
     <div class="col-xs-12 col-sm-4 component">
+
         <div class="time">{{ new Date().toLocaleString("de-DE", {timeZone: "Europe/Madrid"}) }}</div>
         <div id="container" >
             <ul>
-                <li v-for="(item, index) in shops_list">
+                <li v-for="(item, index) in shops_list" @click="changeLat(index)">
                     <div>Store:  {{item.name}} </div>
                     <div>Address: {{ item.addr }}</div>
                     <div>{{ item.working_hour}}</div>
@@ -16,6 +17,7 @@
 
 <script>
     export default {
+        props: ['myLat','myLng','myZoom'],
         data: function () {
             return {
                 shops_list: [
@@ -25,11 +27,20 @@
                     {name: 'Supermercat', addr: 'Carrer de Marina 200', working_hour: '09:00 - 23:00', lat:41.400441, lng: 2.179932},
                     {name: 'Max Supermercat', addr: "Avinguda d'Icaria 134", working_hour: '09:00 - 00:00', lat:41.389472, lng: 2.195313},
                     {name: 'Max Supermercat', addr: "Avinguda d'Icaria 134", working_hour: '09:00 - 00:00', lat:41.3896, lng: 2.194417},
-
                 ],
                 position: 5
             }
         },
+        methods: {
+            changeLat(i) {
+                this.myLat = this.shops_list[i].lat;
+                this.myLng = this.shops_list[i].lng;
+                this.myZoom = 20;
+                this.$emit('changedLat', this.myLat);
+                this.$emit('changedLng', this.myLng);
+                this.$emit('changedZoom', this.myZoom);
+            }
+        }
     }
 </script>
 
@@ -47,6 +58,7 @@
     .time {
         background: lightgoldenrodyellow;
         margin-bottom: 1px;
+        text-align: right;
     }
     #container {
         max-height:400px;

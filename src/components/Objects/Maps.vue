@@ -2,10 +2,11 @@
 
 <template>
     <div class="col-xs-12 col-sm-8">
+        <div> Your address : Almogàvers 123, Barcelona</div>
         <gmap-map
-                :center="center"
-                :zoom="13"
-                style="width: 500px; height: 400px"
+                :center="{lat: myLat, lng: myLng}"
+                :zoom="myZoom"
+                style="width: 500px; height: 350px"
         >
             <gmap-marker
                     :key="index"
@@ -13,10 +14,11 @@
                     :position="m.position"
                     :clickable="true"
                     :draggable="true"
-                    :icon = "m.icon"
                     @click="center=m.position"
+                    :icon="m.icon"
             ></gmap-marker>
         </gmap-map>
+
     </div>
 </template>
 
@@ -37,20 +39,37 @@
     });
 
     export default {
-
+        props: ['myLat', 'myLng','myZoom'],
         data () {
             return {
-                center: {lat: 41.392166, lng: 2.19083},
                 markers: [{
-                    position: {lat: 41.392166, lng: 2.19083},
-                    icon: 'src/assets/shop.png'
+                    position: {lat: 41.397315, lng: 2.190144},
+                    icon: 'src/assets/house.png',
+                    type: 'house'
                 },{
-                    position: {lat: 41.412376, lng: 2.166382},
-                    icon: 'src/assets/house.png'
-
-                }]
+                    position: {lat: 41.392166, lng: 2.19083},
+                    icon: 'src/assets/shop.png',
+                    type: 'shop'
+                },{
+                    position: {lat: 41.3896, lng: 2.194417},
+                    icon: 'src/assets/shop.png',
+                    type: 'shop'
+                },{
+                    position: {lat:41.393631, lng: 2.18889},
+                    icon: 'src/assets/shop.png',
+                    type: 'shop'
+                },{
+                    position: {lat:41.400441, lng: 2.179932},
+                    icon: 'src/assets/shop.png',
+                    type: 'shop'
+                },{
+                    position: {lat:41.389472, lng: 2.195313},
+                    icon: 'src/assets/shop.png',
+                    type: 'shop'
+                },
+                ]
             }
-        }
+        },
     }
 </script>
 

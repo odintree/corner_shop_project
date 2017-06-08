@@ -2,10 +2,7 @@
     <div class="container">
         <app-header></app-header>
         <hr>
-        <div class="row">
-            <maps></maps>
-            <shop-display></shop-display>
-        </div>
+        <app-main-box></app-main-box>
         <hr>
         <app-footer></app-footer>
     </div>
@@ -14,8 +11,7 @@
 <script>
     import Header from './components/Shared/Header.vue';
     import Footer from './components/Shared/Footer.vue';
-    import ShopDisplay from './components/Objects/ShopDisplay.vue';
-    import Maps from './components/Objects/Maps.vue';
+    import MainBox from './components/Shared/MainBox.vue'
 
     export default {
         data: function () {
@@ -26,9 +22,8 @@
         },
         components: {
             appHeader: Header,
-            'shop-display': ShopDisplay,
-            'maps': Maps,
-            'app-footer': Footer
+            'app-footer': Footer,
+            'app-main-box': MainBox
         }
     }
 </script>
