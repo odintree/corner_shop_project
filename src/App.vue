@@ -18,6 +18,12 @@
     import Maps from './components/Objects/Maps.vue';
 
     export default {
+        data: function () {
+            return {
+                lat: 41.39,
+                lgn: 2.19
+            };
+        },
         components: {
             appHeader: Header,
             'shop-display': ShopDisplay,
@@ -29,7 +35,7 @@
 
 <style>
     body {
-        background: #F1F9FD; #F1F9FD;
+        background: #F1F9FD;
     }
 
 </style>

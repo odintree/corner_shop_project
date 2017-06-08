@@ -16,14 +16,6 @@
 
 <script>
     export default {
-        props: {
-            aLat: {
-                type: INT
-            },
-            aLng: {
-                type: INT
-            }
-        },
         data: function () {
             return {
                 shops_list: [
