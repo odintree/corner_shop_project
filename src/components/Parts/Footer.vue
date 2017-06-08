@@ -2,7 +2,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <footer>
-                    <p>argubi.com</p>
+                    <p>Drinkee</p>
                 </footer>
             </div>
         </div>
@@ -11,6 +11,10 @@
 <script>
 </script>
 
-<style>
-  
+<style scoped>
+    p  {
+        font: 200 50px/1.3 'Arizonia', Helvetica, sans-serif;
+        color: #2b2b2b;
+        text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    }
 </style>

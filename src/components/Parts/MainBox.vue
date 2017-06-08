@@ -1,7 +1,5 @@
 <template>
     <div class="component">
-        <h3>Click-clack</h3>
-        <hr>
         <div class="row">
             <app-maps
                     :myLat="lat"
@@ -42,5 +40,6 @@
 </script>
 
 <style scoped>
+
 
 </style>

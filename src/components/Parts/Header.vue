@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <header>
-                <h1>Drinkee</h1>
+                <img src="../../assets/drinkee.png" alt="">
             </header>
         </div>
     </div>
@@ -11,6 +11,9 @@
 <script>
 </script>
 
-<style>
-
+<style scoped>
+    img {
+        width:500px;
+        height: 80px;
+    }
 </style>

@@ -2,7 +2,7 @@
 
 <template>
     <div class="col-xs-12 col-sm-8">
-        <button @click="show = !show ">{{ showOption() }}</button>
+        <a href="#" class="btn btn-red" @click.stop.prevent="show = !show ">{{ showOption($event) }}</a>
         <template v-if="show">
             <div> Your address : {{ homeLocation.addr }}</div>
             <gmap-map
@@ -22,8 +22,8 @@
             </gmap-map>
         </template>
         <template v-else>
-            <div> The distance from your <span :title="homeLocation.addr">place: </span>{{ calcDistance(myLat,myLng,homeLocation.position.lat,homeLocation.position.lng) }}
-            m. Go faster - get some drinks! </div>
+            <div> The distance from your <span :title="homeLocation.addr">place to this shop: </span>{{ calcDistance(myLat,myLng,homeLocation.position.lat,homeLocation.position.lng) }}
+            m. Go faster - get some drinks</div>
         </template>
     </div>
 </template>
@@ -84,7 +84,7 @@
             }
         },
         methods: {
-            showOption : function() {
+            showOption : function(e) {
                 return (this.show == true) ? 'More information' : 'Back to Map'
             },
             calcDistance: function (lat1,lon1,lat2,lon2) {
@@ -100,6 +100,22 @@
     }
 </script>
 
-<style>
+<style scoped>
+    a.btn.btn-red {
+        background-color: #E48681;
+        border-color: rgba(0,0,0,0.3);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+        color: #FFF;
+    }
+
+    a.btn.btn-red:hover {
+        background-color: #DA4F49;
+        border-color: rgba(0,0,0,0.5);
+    }
+
+    a.btn.btn-red:active {
+        background-color: #B32C24;
+        border-color: rgba(0,0,0,0.9);
+    }
 
 </style>
