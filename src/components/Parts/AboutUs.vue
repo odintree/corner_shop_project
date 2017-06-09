@@ -13,13 +13,16 @@
             intern at Trybe app. He specialties are marketing, sales and his social skills.
         </div>
         <hr>
-        <div class="intro"><span>Gustavo</span>  : is 32 years old and from Brazil. He is a Digital Marketing
+        <div class="intro"><span>Gustavo</span>  : is 29 years old and from Brazil. He is a Digital Marketing
             Specialist with more than 8 years of experience, working with companies
             as Honda Motors, Nextel, A&E Channel and The History Channel. Currently
             he is a digital marketing intern at Learnlight.
         </div>
         <hr>
-        <div><span>Arin</span>: </div>
+        <div><span>Arin</span>: is 27 years old and from Sweden.
+            Arin comes from a background of serial startups and has found his interest in the digital development industry,
+            coming from a logistics background he like things to move in a fast pace.
+            Arin currently works as a project manager at Argubi.tech.</div>
         <hr>
         <div class="intro"><span>Bin</span>  : is 25 years old from Russia. He has finance background but in the
             same time has a huge interest in web development and data science.

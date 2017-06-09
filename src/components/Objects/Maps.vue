@@ -22,8 +22,8 @@
             </gmap-map>
         </template>
         <template v-else>
-            <div> The distance from your <span :title="homeLocation.addr">place to this shop: </span>{{ calcDistance(myLat,myLng,homeLocation.position.lat,homeLocation.position.lng) }}
-            m. Go faster - get some drinks</div>
+            <div> The distance from your <span :title="homeLocation.addr">address  </span> to this shop: {{ calcDistance(myLat,myLng,homeLocation.position.lat,homeLocation.position.lng) }}
+            m. Vamos - get some drinks</div>
         </template>
     </div>
 </template>
