@@ -1,18 +1,4 @@
-# vue-fp
+This is the project for studying purpose. 
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For the project you will need vue-cli (https://github.com/vuejs/vue-cli) 
+And for now the only extra node module that need to be installed is vue2-gmap (https://www.npmjs.com/package/vue2-google-maps or https://www.npmjs.com/package/vue2-google-maps) 
